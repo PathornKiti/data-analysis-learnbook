@@ -25,7 +25,9 @@ src/myproject/
     load.py              read raw data (never modifies it)
     clean.py             cleaning functions
     features.py          derived columns
+    distributions.py     shape table, candidate fits (AIC), Q-Q points
     analysis.py          statistics: group summaries, CIs, bootstrap, permutation test, effect size
+    hypothesis.py        two-group / paired / proportion reports, Holm correction (several methods side by side)
     model.py             fit / evaluate models (statsmodels + scikit-learn)
     plots.py             reusable chart functions
 tests/                   pytest checks for the trickiest functions

@@ -88,6 +88,9 @@ jobs:
           o = pd.read_csv("data/messy_orders.csv")
           assert o.shape == (312, 7), o.shape
           assert o.duplicated().sum() == 12
+          t = pd.read_csv("data/app_trial.csv"); d = pd.read_csv("data/service_desk.csv")
+          assert t.shape == (300, 8) and t["group"].value_counts().eq(100).all(), t.shape
+          assert d.shape == (480, 5), d.shape
           print("datasets OK")
           PY
 

@@ -33,6 +33,9 @@
    (see `projects/template/src/myproject/plots.py`).
 4. Write 3–5 bullet points of *observations* and 2 *new questions* the charts raised. They go in your report.
 
+## Going deeper
+Module [9b: Charts and the calculations behind them](../09b-charts-and-calculations/) computes every chart's numbers by hand (bins, ECDF, KDE, box-plot fences, error bars, bands, heatmaps) and teaches thesis-grade figures; take it after Module 9.
+
 ## Further reading
 * [matplotlib tutorials](https://matplotlib.org/stable/tutorials/index.html) · [seaborn gallery](https://seaborn.pydata.org/examples/index.html)
 * *The Visual Display of Quantitative Information*, Edward Tufte, and *Storytelling with Data*, Cole Nussbaumer Knaflic

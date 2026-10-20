@@ -13,9 +13,12 @@ reproducible analysis, organised as a **Python package** rather than a single me
 | 4. Cleaning | Module 5 | `src/<pkg>/clean.py` + cleaned data |
 | 5. EDA & plots | Module 6 | `src/<pkg>/plots.py` + EDA section in the notebook |
 | 6. Restructure | Module 6.5 | project turned into a package; `run_analysis.py` |
-| 7. Analysis / model | Modules 8–10 | `src/<pkg>/analysis.py` |
-| 8. Polish | Module 11 | tests, docstrings, README, report notebook |
-| 9. Capstone | Module 12 | final package + report + short presentation |
+| 7. Distributions | Module 7b | `src/<pkg>/distributions.py` + a distribution profile of your key variables |
+| 8. Hypotheses & analysis | Modules 8, 8b | **hypothesis table** (written *before* testing) + `src/<pkg>/analysis.py`, `hypothesis.py` |
+| 9. Model | Modules 9–10 | `src/<pkg>/model.py` and a model comparison |
+| 10. Chart audit | Module 9b | every figure justified, its calculation and intervals stated, captions written |
+| 11. Polish | Module 11 | tests, docstrings, README, report notebook |
+| 12. Capstone | Module 12 | final package + report + short presentation |
 
 ## Getting started
 
@@ -30,6 +33,7 @@ reproducible analysis, organised as a **Python package** rather than a single me
 * **Raw data is read-only.** Cleaning produces new files in `data/processed/`.
 * **One command reproduces everything:** `python run_analysis.py`.
 * **No copy-paste.** If you write something twice, make it a function in `src/`.
+* **Pre-specify your tests.** Write your hypotheses, tests and primary outcomes down *before* running them, and report every test you ran. The [`reference/`](../reference/) sheets help you choose and write them up.
 * **Respect licences and privacy.** Never publish personal data. Cite your sources.
 
 ## Worked example and the project doctor

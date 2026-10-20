@@ -36,6 +36,10 @@ pip install -r requirements.txt nbconvert
 * `projects/template/` and `projects/worked-example/` are tested in CI (`pytest`, `run_analysis.py`, notebooks, project doctor).
 * The worked example has a test that fails if its README's headline numbers go stale; update the README when results change.
 
+## Reference sheets
+* `reference/` summarises the modules. If you change a test, chart or distribution in a lesson, update the matching sheet, and keep every function name and parameter convention **verified by running it** (SciPy's parametrisations, for example, are easy to get wrong).
+* Numbers quoted in prose or templates must come from the data. Round **once**, from the unrounded value (a p-value of 0.026499 is 0.026, not 0.027).
+
 ## Style
 * Python: clear names, docstrings for public functions, standard library and the course's dependencies only.
 * Markdown: short sentences, concrete examples, math in `$...$`. Prefer showing a result before explaining it.

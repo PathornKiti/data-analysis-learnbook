@@ -34,13 +34,17 @@ as a small Python package that anyone can run, test and understand.
 | 6 | [Visualization & EDA](modules/06-visualization-eda/) | choose honest charts; correlation and its limits |
 | 6.5 | [From notebook to module](modules/06b-notebook-to-module/) | scripts, packages, `pytest`; hands-on package exercise |
 | 7 | [Probability](modules/07-probability/) | simulate chance; Bayes, expected value, the CLT |
+| 7b | [Distributions of data](modules/07b-distributions-of-data/) | skewness, a distribution catalogue, MLE & AIC, Q-Q plots, goodness-of-fit, transformations |
 | 8 | [Statistical inference](modules/08-statistical-inference/) | confidence intervals, bootstrap, tests, power |
+| 8b | [Hypothesis-testing toolkit](modules/08b-hypothesis-testing-toolkit/) | t / paired / rank tests, ANOVA, ANCOVA, proportions, χ², equivalence, power; choose and report the right test |
 | 9 | [Linear regression](modules/09-linear-regression/) | least squares, gradient descent, interpretation |
+| 9b | [Charts & their calculations](modules/09b-charts-and-calculations/) | the maths behind every chart: bins, ECDF, KDE, box plots, error bars, confidence bands, heatmaps |
 | 10 | [Prediction & evaluation](modules/10-prediction-evaluation/) | avoid overfitting; cross-validation; logistic regression; metrics |
 | 11 | [Communicating results](modules/11-communicating-results/) | write honest reports, charts, docs and tests; ethics |
 | 12 | [Capstone](modules/12-capstone/) | finish, review and present your project |
 
-See [`SYLLABUS.md`](SYLLABUS.md) for outcomes, pacing and the maths in each module, and the [`GLOSSARY.md`](GLOSSARY.md) for terms.
+See [`SYLLABUS.md`](SYLLABUS.md) for outcomes, pacing and the maths in each module, the [`GLOSSARY.md`](GLOSSARY.md) for terms, and the [`reference/`](reference/) sheets
+(**which test? which chart? which distribution? how do I write it up?**) to keep open while writing a thesis.
 
 ## Quick start
 
@@ -79,6 +83,7 @@ projects/
   worked-example/    a finished project (bike-share demand) to study
   check_project.py   the "project doctor"
   rubric.md          how projects are assessed
+reference/           one-page sheets: choosing a test, choosing a chart, distributions, reporting results
 data/                small bundled (synthetic) datasets + generator script
 .github/workflows/   CI that runs every lesson, solution, package and project
 ```

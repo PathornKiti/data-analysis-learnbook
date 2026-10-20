@@ -3,7 +3,7 @@
 How to teach with this repository. Everything here is a suggestion; adapt freely.
 
 ## What you're getting
-* **14 modules** of notebook lessons, self-checking exercises, math notes and worked solutions
+* **17 modules** of notebook lessons, self-checking exercises, math notes and worked solutions
 * A **project spine**: students build one project across the whole course (proposal → package → report)
 * Two **package exercises** (Modules 6.5 and 11) that practise `.py` modules and tests
 * A **worked example** and a **project doctor** script to make "reproducible" concrete and checkable
@@ -22,18 +22,21 @@ How to teach with this repository. Everything here is a suggestion; adapt freely
 | 6 Visualization & EDA | 6–8 | 3 | honest charts; correlation limits |
 | 6.5 Notebook → module | 5–7 | 2–3 | imports, packages, tests |
 | 7 Probability | 6–8 | 3 | conditional probability, Bayes |
+| 7b Distributions | 8–10 | 4 | MLE, reading Q-Q plots, what goodness-of-fit tests can and can't say |
 | 8 Inference | 8–10 | 4 | what a p-value *isn't*; interval interpretation |
+| 8b Hypothesis-testing toolkit | 10–14 | 5–6 | choosing the test from the *design* (paired vs independent), multiplicity, ANCOVA, power |
 | 9 Regression | 8–10 | 4 | gradient descent; interpreting coefficients |
+| 9b Charts & calculations | 8–10 | 4 | SD vs SE vs CI; confidence vs prediction bands |
 | 10 Prediction | 8–10 | 4 | leakage; metrics beyond accuracy |
 | 11 Communicating | 6–8 | 3 | writing good tests and honest sentences |
 | 12 Capstone | 12–18 | 4–6 + presentations | scope control |
 
 ## Formats
 
-**14-week semester (default).** One module per week roughly, as in the [pacing table](SYLLABUS.md#suggested-pacing-14-weeks).
+**18-week semester (default).** One module per week roughly (8b gets two), as in the [pacing table](SYLLABUS.md#suggested-pacing).
 *Flipped:* students run `lesson.ipynb` before class; class time is for `exercises.ipynb`, discussion of tricky ideas, and a 10-minute project check-in.
 
-**8-week intensive.** Merge modules (0–1, 2–3, 4–5, 6–6.5, 7–8, 9–10, 11, 12) and keep the project small. Skip the optional parts of math notes; make the capstone a "finish and present" week.
+**8-week intensive.** Merge modules (0–1, 2–3, 4–5, 6–6.5, 7–8, 9–10, 11, 12), skip 7b/8b/9b (point students to the reference sheets instead) and keep the project small. Skip the optional parts of math notes; make the capstone a "finish and present" week.
 
 **Self-study.** Work the modules in order; do every project checkpoint (it is what turns the exercises into skill); join or form a study group for the Module 12 peer review.
 
@@ -58,6 +61,9 @@ How to teach with this repository. Everything here is a suggestion; adapt freely
 * **Module 6:** the Anscombe and Simpson demos are worth doing live; ask students to predict the plots first.
 * **Module 7:** simulate everything before deriving. The birthday problem and the medical-test example reliably produce "wait, what?" moments.
 * **Module 8:** use the job-vs-no-job example (p ≈ 0.07). Have students argue both wrong conclusions, then the right one.
+* **Module 7b:** bring two variables to class (one symmetric, one skewed) and have students predict the Q-Q plot shapes before drawing them. Then ask them to *break* a Shapiro–Wilk result by changing the sample size.
+* **Module 8b:** give students the three-group experiment and ask which test they'd use *before* showing the data; the "post-test only vs ANCOVA" contrast (p = 0.085 vs p < 0.001 on the same data) is the module's best lesson about design choices. Have them write a hypothesis table first.
+* **Module 9b:** show two charts of the same data with SD vs 95% CI error bars and ask what each says; then ask students to audit one figure from a published paper for what its error bars mean.
 * **Module 9:** do gradient descent on the board with two parameters and a bowl-shaped contour plot; the learning-rate demo makes the idea stick.
 * **Module 10:** have students try to *break* a model: leak a feature, shuffle time, add junk columns; see which of them survive cross-validation.
 * **Module 11:** run the test-writing exercise as a competition: who catches the most injected bugs with the fewest tests?
