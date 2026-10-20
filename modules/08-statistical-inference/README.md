@@ -34,6 +34,9 @@
 4. Add tests for the new functions (see `projects/template/tests/test_analysis.py`).
 5. Extend `run_analysis.py` so it prints these results.
 
+## Going deeper
+Module [8b: The hypothesis-testing toolkit](../08b-hypothesis-testing-toolkit/) covers paired and non-parametric tests, ANOVA and post hoc comparisons, ANCOVA, proportions, equivalence testing and power analysis, with a decision guide and reporting templates.
+
 ## Further reading
 * *Statistics Done Wrong* (Alex Reinhart), a short, readable tour of common mistakes
 * Downey, *There Is Only One Test*, on the permutation/simulation view of testing

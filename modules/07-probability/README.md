@@ -34,6 +34,9 @@ No new code files. Write 6–10 sentences (in your project README or notebook) a
 4. Name one thing in your data that might look like a pattern but could be **chance**. In Module 8 you'll test it.
 5. Run **one simulation** relevant to your project (e.g. "if there were no relationship, how big a correlation would random shuffling give?").
 
+## Going deeper
+Module [7b: Distributions of data](../07b-distributions-of-data/) adds skewness/kurtosis, a catalogue of distributions, maximum-likelihood fitting, goodness-of-fit and transformations: essential for justifying methods in a thesis.
+
 ## Further reading
 * Khan Academy [Statistics and probability](https://www.khanacademy.org/math/statistics-probability)
 * *Think Bayes* (Allen Downey, free online) for Bayesian thinking with Python

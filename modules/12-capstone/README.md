@@ -22,8 +22,8 @@ with honest uncertainty, tests, and a report a stranger can understand.
 1. **Question:** one clear main question, plus supporting *describe / compare / relate* questions (and *predict* if it fits your data).
 2. **Data:** real data of at least a few hundred rows, with a data card (source, licence, limits).
 3. **Cleaning:** every decision documented and justified; raw data untouched; a validation step that stops the pipeline when data look wrong.
-4. **EDA:** at least **four** purposeful charts with takeaway titles (a distribution, a comparison, a relationship, and one over time or by group).
-5. **Inference:** at least one result reported with an **interval** (and effect size), and the full list of comparisons you ran.
+4. **EDA:** at least **four** purposeful charts with takeaway titles (a distribution, a comparison, a relationship, and one over time or by group); a **distribution profile** of your key variables; and a **chart audit** (Module 9b) so every figure's calculation and intervals are stated in its caption.
+5. **Inference:** a **hypothesis table written before testing** (Module 8b) with the test matched to the design, assumptions checked, and each primary result reported with an estimate, **interval**, effect size and n; the full list of comparisons you ran; a sensitivity analysis.
 6. **Modelling** (where it fits your question): a baseline, a sensible model, honest evaluation (held-out data or cross-validation), residual or error analysis.
 7. **Code:** logic in `src/` modules; functions with docstrings; no copy-paste; at least **six meaningful tests**.
 8. **Reproducibility:** `pip install -r requirements.txt && python run_analysis.py` works from a fresh clone; seeds set; relative paths.
@@ -50,7 +50,8 @@ See [`milestones.md`](milestones.md). In short: **week 1** finish data, cleaning
 
 ## Stretch options (pick at most one or two; quality beats quantity)
 
-* **Time series:** seasonality, rolling averages, time-series cross-validation.
+* **Time series:** seasonality, rolling averages, time-series cross-validation (see Module X4 for decomposition, autocorrelation, HAC standard errors and forecast evaluation).
+* **Repeated measures, survival or Bayesian analysis:** see extension modules X1, X2 and X3.
 * **Text data:** word counts, simple sentiment, topic exploration (with `scikit-learn`'s `CountVectorizer`/`TfidfVectorizer`).
 * **Data from an API or scraping** (check the site's terms and rate limits; cache responses).
 * **Model explanation:** permutation importance, partial-dependence plots, error analysis by group.

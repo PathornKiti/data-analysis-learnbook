@@ -5,8 +5,8 @@
 | **Question & motivation** | 10 | specific, measurable question; clear why it matters; scoped realistically |
 | **Data understanding** | 10 | data card complete (source, licence, columns, limits); feasibility honestly assessed |
 | **Cleaning** | 10 | each cleaning decision justified; raw data untouched; before/after checks |
-| **Exploration & visuals** | 15 | well-chosen, labelled, honest charts; observations tied to the question |
-| **Analysis / modelling** | 20 | appropriate method; assumptions stated; uncertainty reported (intervals, test results, train/test split); no overclaiming |
+| **Exploration & visuals** | 15 | well-chosen, labelled, honest charts with takeaway titles; variable distributions profiled (shape table, Q-Q/ECDF where relevant); every figure's calculation and interval/band type stated in its caption (chart audit) |
+| **Analysis / modelling** | 20 | hypotheses and tests **pre-specified** (hypothesis table, primary vs exploratory, power considered); the test **matches the design** (paired vs independent, outcome type); assumptions checked with plots and a sensitivity analysis; estimate + interval + effect size + n reported; multiplicity handled; model evaluated on held-out data against a baseline; no overclaiming; where the data are repeated, clustered, censored or time-ordered, the method accounts for that dependence (extension modules X1–X4) |
 | **Code organisation** | 15 | logic in `src/` modules, small functions with docstrings, no copy-paste, sensible names |
 | **Reproducibility & tests** | 10 | `pip install -r requirements.txt` + `python run_analysis.py` works from a clean clone; at least six meaningful `pytest` tests; `python projects/check_project.py` shows no ❌ |
 | **Communication** | 10 | README and report tell a clear story; plain-language conclusions; limitations section |
