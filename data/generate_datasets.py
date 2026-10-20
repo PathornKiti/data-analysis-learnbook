@@ -168,10 +168,80 @@ def make_service_desk(n: int = 480) -> pd.DataFrame:
     )
 
 
+def make_longitudinal_scores(n_students: int = 80, n_waves: int = 5) -> pd.DataFrame:
+    """Repeated measures: each student is scored at 5 waves; half join a support programme.
+
+    Student-specific intercepts and slopes make the rows of one student correlated (clustered), so treating the
+    400 rows as independent is wrong. Own seed, so adding it never changes other files.
+    """
+    r = np.random.default_rng(303)
+    ids = np.arange(1, n_students + 1)
+    group = np.where(ids % 2 == 0, "programme", "control")
+    u0 = r.normal(0, 8, n_students)                      # student-specific starting level
+    u1 = r.normal(0, 1.0, n_students)                    # student-specific growth per wave
+    rows = []
+    for i, sid in enumerate(ids):
+        for wave in range(n_waves):
+            effect = 1.5 * wave if group[i] == "programme" else 0.0
+            score = 60 + u0[i] + (2.0 + u1[i]) * wave + effect + r.normal(0, 4)
+            rows.append((sid, group[i], wave, round(score, 1)))
+    df = pd.DataFrame(rows, columns=["student_id", "group", "wave", "score"])
+    # some students miss a late wave (unbalanced data, as in real studies)
+    drop = df[(df["wave"] >= 3)].sample(frac=0.12, random_state=5).index
+    return df.drop(index=drop).reset_index(drop=True)
+
+
+def make_customer_churn(n: int = 400) -> pd.DataFrame:
+    """Time to churn with right-censoring: customers still active at the end of follow-up are censored.
+
+    Basic-plan customers churn faster (hazard ratio about 1.8 versus premium); higher spend lowers the hazard.
+    """
+    r = np.random.default_rng(404)
+    plan = r.choice(["basic", "premium"], size=n, p=[0.6, 0.4])
+    spend = np.clip(r.normal(40, 12, n), 5, None).round(1)
+    base_rate = 0.045                                    # per month for premium at average spend
+    hazard = base_rate * np.where(plan == "basic", 1.8, 1.0) * np.exp(-0.02 * (spend - 40))
+    event_time = r.exponential(1 / hazard)
+    enrol_gap = r.uniform(0, 24, n)                      # staggered enrolment: censoring at the study end (month 36)
+    censor_time = np.minimum(36 - enrol_gap, 30)
+    time = np.maximum(np.minimum(event_time, censor_time), 0.1)      # follow-up is at least 0.1 months
+    churned = (event_time <= censor_time).astype(int)
+    return pd.DataFrame(
+        {
+            "customer_id": np.arange(1, n + 1),
+            "plan": plan,
+            "monthly_spend": spend,
+            "tenure_months": time.round(2),
+            "churned": churned,
+        }
+    )
+
+
+def make_monthly_demand(n_months: int = 144) -> pd.DataFrame:
+    """Monthly demand (2013-2024): trend + yearly seasonality + AR(1) noise + a promotion effect.
+
+    The AR(1) noise (phi = 0.6) makes consecutive months correlated, so ordinary standard errors are too small.
+    """
+    r = np.random.default_rng(505)
+    months = pd.date_range("2013-01-01", periods=n_months, freq="MS")
+    t = np.arange(n_months)
+    season = 12 * np.sin(2 * np.pi * (months.month - 3) / 12)
+    promo = (r.random(n_months) < 0.25).astype(int)
+    noise = np.zeros(n_months)
+    shocks = r.normal(0, 5, n_months)
+    for k in range(1, n_months):
+        noise[k] = 0.6 * noise[k - 1] + shocks[k]
+    demand = 200 + 0.8 * t + season + 8 * promo + noise
+    return pd.DataFrame({"month": months.strftime("%Y-%m-%d"), "demand": demand.round(1), "promo": promo})
+
+
 if __name__ == "__main__":
     make_students().to_csv(OUT / "students.csv", index=False)
     make_daily_rides().to_csv(OUT / "daily_rides.csv", index=False)
     make_messy_orders().to_csv(OUT / "messy_orders.csv", index=False)
     make_app_trial().to_csv(OUT / "app_trial.csv", index=False)
     make_service_desk().to_csv(OUT / "service_desk.csv", index=False)
-    print("Wrote students.csv, daily_rides.csv, messy_orders.csv, app_trial.csv and service_desk.csv to", OUT)
+    make_longitudinal_scores().to_csv(OUT / "longitudinal_scores.csv", index=False)
+    make_customer_churn().to_csv(OUT / "customer_churn.csv", index=False)
+    make_monthly_demand().to_csv(OUT / "monthly_demand.csv", index=False)
+    print("Wrote all bundled datasets to", OUT)

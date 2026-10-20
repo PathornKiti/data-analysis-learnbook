@@ -68,5 +68,38 @@ Hourly help-desk records.
 | `satisfaction_pct` | bounded at 100, left-skewed: beta-like |
 | `call_minutes` | **bimodal**: a mixture of quick calls (~61%, around 3 min) and long calls (~39%, around 12 min) |
 
+## `longitudinal_scores.csv` (381 rows): repeated measures (Module X1)
+
+80 students (two groups, `control` and `programme`) with a test score at up to five waves; about 12% of the waves from wave 3 onward are missing (dropout), so the panel is unbalanced.
+
+| column | meaning |
+|---|---|
+| `student_id` | 1–80 |
+| `group` | `control` or `programme` |
+| `wave` | 0–4 |
+| `score` | test score; students differ in starting level and in speed of progress, and the programme adds about 1.5 points per wave |
+
+## `customer_churn.csv` (400 rows): time-to-event data with censoring (Module X2)
+
+| column | meaning |
+|---|---|
+| `customer_id` | 1–400 |
+| `plan` | `basic` or `premium` |
+| `monthly_spend` | spend per month |
+| `tenure_months` | months observed |
+| `churned` | 1 = left the service at `tenure_months`; 0 = **censored** (still a customer when observation ended) |
+
+302 customers churned and 98 are censored. Basic-plan customers have a higher churn hazard.
+
+## `monthly_demand.csv` (144 rows): a time series (Module X4)
+
+| column | meaning |
+|---|---|
+| `month` | first day of the month, Jan 2013 to Dec 2024 |
+| `demand` | units demanded: a linear trend, a yearly cycle peaking in June, a promotion bump and autocorrelated noise |
+| `promo` | 1 if a promotion ran that month |
+
+Module X3 (Bayesian inference) reuses `app_trial.csv`, `students.csv` and `service_desk.csv`.
+
 For your own project you will bring **real** data; see
 [`projects/tracks.md`](../projects/tracks.md) for where to find it.

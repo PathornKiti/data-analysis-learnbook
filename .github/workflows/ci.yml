@@ -91,6 +91,10 @@ jobs:
           t = pd.read_csv("data/app_trial.csv"); d = pd.read_csv("data/service_desk.csv")
           assert t.shape == (300, 8) and t["group"].value_counts().eq(100).all(), t.shape
           assert d.shape == (480, 5), d.shape
+          L = pd.read_csv("data/longitudinal_scores.csv"); C = pd.read_csv("data/customer_churn.csv"); M = pd.read_csv("data/monthly_demand.csv")
+          assert L.shape == (381, 4) and L["student_id"].nunique() == 80, L.shape
+          assert C.shape == (400, 5) and C["churned"].sum() == 302, C.shape
+          assert M.shape == (144, 3) and M["promo"].sum() == 30, M.shape
           print("datasets OK")
           PY
 
