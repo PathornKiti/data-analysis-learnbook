@@ -8,7 +8,7 @@
 | **Exploration & visuals** | 15 | well-chosen, labelled, honest charts; observations tied to the question |
 | **Analysis / modelling** | 20 | appropriate method; assumptions stated; uncertainty reported (intervals, test results, train/test split); no overclaiming |
 | **Code organisation** | 15 | logic in `src/` modules, small functions with docstrings, no copy-paste, sensible names |
-| **Reproducibility & tests** | 10 | `pip install -r requirements.txt` + `python run_analysis.py` works from a clean clone; a few meaningful `pytest` tests |
+| **Reproducibility & tests** | 10 | `pip install -r requirements.txt` + `python run_analysis.py` works from a clean clone; at least six meaningful `pytest` tests; `python projects/check_project.py` shows no ❌ |
 | **Communication** | 10 | README and report tell a clear story; plain-language conclusions; limitations section |
 
 ## Levels

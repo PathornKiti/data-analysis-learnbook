@@ -3,47 +3,48 @@
 A hands-on course that takes you from **zero Python** to a **complete data-analysis project of your own**, using
 **Python + data analysis + the essential mathematics** you actually need.
 
-You don't finish this course with exercises. You finish it with *something you built*, about something *you care about*.
+You don't finish this course with exercises. You finish it with *something you built*, about something *you care about*,
+as a small Python package that anyone can run, test and understand.
 
 ## Who it's for
 
 * Complete beginners to programming (high-school maths is enough)
 * Students, career-changers and curious people who want to answer questions with data
-* Teachers who want a ready-to-use, project-based syllabus
+* Teachers who want a ready-to-use, project-based syllabus (see the [instructor guide](INSTRUCTOR_GUIDE.md))
 
 ## How it works
 
 1. **Learn in notebooks.** Each module has a Jupyter `lesson.ipynb` (read and run), an `exercises.ipynb` with built-in
    self-checks, and short `math-notes.md`. Solutions live in [`solutions/`](solutions/).
-2. **Math at the point of need.** Mean, variance, vectors, probability, least squares… each appears exactly when the code needs it.
+2. **Math at the point of need.** Mean, variance, vectors, probability, least squares, gradient descent, odds… each appears exactly when the code needs it.
 3. **Build your own project from week 1.** In Module 2 you pick a topic you love. Every module after that ends with a
-   *project checkpoint*. By the capstone, your project is a small **Python package** (`.py` modules, tests, a one-command
-   `run_analysis.py`) plus a report notebook, which anyone can reproduce.
+   *project checkpoint*. In Module 6.5 you move from notebooks to **`.py` modules**; by the capstone your project is a package with tests,
+   a one-command `run_analysis.py`, and a report notebook, checked by a **project doctor** script.
 
 ## Course map
 
-| # | Module | Status |
+| # | Module | You will… |
 |---|---|---|
-| 0 | [Setup](modules/00-setup/) | ✅ available |
-| 1 | [Python foundations](modules/01-python-foundations/) | ✅ available |
-| 2 | [Project kickoff](modules/02-project-kickoff/) | ✅ available |
-| 3 | [NumPy](modules/03-numpy/) | ✅ available |
-| 4 | [pandas I: tables](modules/04-pandas-1/) | ✅ available |
-| 5 | [pandas II: cleaning](modules/05-pandas-2-cleaning/) | ✅ available |
-| 6 | [Visualization & EDA](modules/06-visualization-eda/) | ✅ available |
-| 6.5 | [From notebook to module](modules/06b-notebook-to-module/) | ✅ available |
-| 7 | [Probability](modules/07-probability/) | ✅ available |
-| 8 | [Statistical inference](modules/08-statistical-inference/) | ✅ available |
-| 9 | [Linear regression](modules/09-linear-regression/) | ✅ available |
-| 10 | [Prediction & evaluation](modules/10-prediction-evaluation/) | ✅ available |
-| 11 | Communicating results | 🚧 planned |
-| 12 | Capstone | 🚧 planned |
+| 0 | [Setup](modules/00-setup/) | install Python, Jupyter and Git; run your first notebook |
+| 1 | [Python foundations](modules/01-python-foundations/) | write functions, loops and comprehensions; see Σ as a loop |
+| 2 | [Project kickoff](modules/02-project-kickoff/) | turn an interest into an answerable question; pick a dataset |
+| 3 | [NumPy](modules/03-numpy/) | compute with arrays; vectors, dot products, z-scores |
+| 4 | [pandas I: tables](modules/04-pandas-1/) | load, filter, group and summarise; mean/median/variance |
+| 5 | [pandas II: cleaning](modules/05-pandas-2-cleaning/) | fix messy data; percentages, logs, the IQR rule |
+| 6 | [Visualization & EDA](modules/06-visualization-eda/) | choose honest charts; correlation and its limits |
+| 6.5 | [From notebook to module](modules/06b-notebook-to-module/) | scripts, packages, `pytest`; hands-on package exercise |
+| 7 | [Probability](modules/07-probability/) | simulate chance; Bayes, expected value, the CLT |
+| 8 | [Statistical inference](modules/08-statistical-inference/) | confidence intervals, bootstrap, tests, power |
+| 9 | [Linear regression](modules/09-linear-regression/) | least squares, gradient descent, interpretation |
+| 10 | [Prediction & evaluation](modules/10-prediction-evaluation/) | avoid overfitting; cross-validation; logistic regression; metrics |
+| 11 | [Communicating results](modules/11-communicating-results/) | write honest reports, charts, docs and tests; ethics |
+| 12 | [Capstone](modules/12-capstone/) | finish, review and present your project |
 
-See [`SYLLABUS.md`](SYLLABUS.md) for outcomes, pacing and the maths covered in each module.
+See [`SYLLABUS.md`](SYLLABUS.md) for outcomes, pacing and the maths in each module, and the [`GLOSSARY.md`](GLOSSARY.md) for terms.
 
 ## Quick start
 
-**Option A: run locally**
+**Option A: run locally (recommended)**
 
 ```bash
 git clone https://github.com/PathornKiti/data-analysis-learnbook.git
@@ -56,19 +57,33 @@ jupyter lab
 Then open `modules/00-setup/check_environment.ipynb`. Full instructions: [`modules/00-setup/`](modules/00-setup/README.md).
 
 **Option B: Google Colab (nothing to install).** Open any notebook from GitHub in Colab; the data-loading cell
-clones the repo automatically.
+clones the repo automatically. (Modules 6.5, 11 and 12 and your project work best locally, because you'll create `.py` files.)
+
+**Curious what the finished product looks like?** Try the worked example (a few seconds once the packages are installed):
+
+```bash
+cd projects/worked-example
+pip install -r requirements.txt
+python run_analysis.py
+```
 
 ## Repository layout
 
 ```
-modules/NN-name/     README (goals, project checkpoint), lesson, exercises, math-notes
+modules/NN-name/     README (goals, pitfalls, project checkpoint), lesson, exercises, math-notes
 solutions/NN-name/   worked solutions (try first!)
-projects/            tracks & dataset ideas, proposal/data-card templates, rubric, project template package
+projects/
+  tracks.md          interest tracks and dataset sources
+  templates/         proposal, data card, project README, report outline, ethics checklist, presentation
+  template/          a runnable project skeleton to copy
+  worked-example/    a finished project (bike-share demand) to study
+  check_project.py   the "project doctor"
+  rubric.md          how projects are assessed
 data/                small bundled (synthetic) datasets + generator script
-.github/workflows/   CI that runs every lesson, solution and the project template
+.github/workflows/   CI that runs every lesson, solution, package and project
 ```
 
 ## Contributing
 
-Notebooks are the source of truth. Keep outputs cleared in committed notebooks. CI executes every lesson and solutions
-notebook, so run them top-to-bottom before opening a pull request.
+Notebooks are the source of truth. See [`CONTRIBUTING.md`](CONTRIBUTING.md): keep outputs cleared, make exercises self-checking,
+and run everything top-to-bottom before opening a pull request. CI executes every lesson and solutions notebook.
