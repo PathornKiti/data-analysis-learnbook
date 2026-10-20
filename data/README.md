@@ -41,5 +41,32 @@ Deliberately messy, for Module 5 (cleaning). Problems planted on purpose:
 
 There are also 12 exact duplicate rows, so a clean table has 300 rows.
 
+
+## `app_trial.csv` (300 rows): a randomised app experiment (Modules 7b, 8b, 9b)
+
+300 users randomly assigned to three onboarding versions (100 each).
+
+| column | meaning |
+|---|---|
+| `user_id` | 1–300 |
+| `group` | `control`, `tutorial` or `gamified` |
+| `device` | `ios`, `android` or `web` (unrelated to group, as expected from randomisation) |
+| `pre_score`, `post_score` | skill-test score before and after (**paired**); about 0.85 correlated |
+| `minutes_active` | time in the app: **strongly right-skewed** (lognormal) |
+| `converted` | 1 if the user converted, else 0 (**binary**) |
+| `rating` | satisfaction on a 1–5 scale (**ordinal**) |
+
+## `service_desk.csv` (480 rows): four differently shaped variables (Module 7b)
+
+Hourly help-desk records.
+
+| column | shape |
+|---|---|
+| `hour_id` | 1–480 |
+| `tickets` | counts: Poisson (mean ≈ variance) |
+| `response_minutes` | right-skewed, positive: lognormal |
+| `satisfaction_pct` | bounded at 100, left-skewed: beta-like |
+| `call_minutes` | **bimodal**: a mixture of quick calls (~61%, around 3 min) and long calls (~39%, around 12 min) |
+
 For your own project you will bring **real** data; see
 [`projects/tracks.md`](../projects/tracks.md) for where to find it.
