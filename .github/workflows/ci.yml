@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  notebooks:
+    name: Run lessons and solutions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt nbconvert
+      - name: Execute lesson and solution notebooks
+        env:
+          MPLBACKEND: Agg
+        run: |
+          set -e
+          for nb in modules/*/lesson.ipynb modules/00-setup/check_environment.ipynb solutions/*/*.ipynb; do
+            echo "::group::$nb"
+            jupyter nbconvert --to notebook --execute --output-dir "$RUNNER_TEMP/out/$(dirname "$nb")" "$nb"
+            echo "::endgroup::"
+          done
+      - name: Exercise notebooks are valid and have no stored outputs
+        run: |
+          python - <<'PY'
+          import glob, nbformat
+          bad = []
+          for p in glob.glob("modules/**/*.ipynb", recursive=True) + glob.glob("solutions/**/*.ipynb", recursive=True) + glob.glob("projects/**/*.ipynb", recursive=True):
+              nb = nbformat.read(p, 4)
+              nbformat.validate(nb)
+              if any(c.cell_type == "code" and (c.outputs or c.execution_count) for c in nb.cells):
+                  bad.append(p)
+          assert not bad, f"Clear outputs before committing: {bad}"
+          print("All notebooks valid and clean.")
+          PY
+
+  datasets:
+    name: Dataset generator still works
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy pandas
+      - run: python data/generate_datasets.py
+      - name: Generated files have the documented shape
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          s = pd.read_csv("data/students.csv"); r = pd.read_csv("data/daily_rides.csv")
+          assert s.shape == (200, 7), s.shape
+          assert r.shape == (366, 5), r.shape
+          assert r["temp_c"].isna().sum() == 6
+          print("datasets OK")
+          PY
+
+  project-template:
+    name: Project template runs
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/template
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt nbconvert
+      - run: pytest
+      - run: python run_analysis.py
+      - name: Execute template notebooks
+        env:
+          MPLBACKEND: Agg
+        run: |
+          for nb in notebooks/*.ipynb; do
+            jupyter nbconvert --to notebook --execute --output-dir "$RUNNER_TEMP/out" "$nb"
+          done
