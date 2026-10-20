@@ -1,0 +1,313 @@
+order_id,order_date,customer,city,item,quantity,unit_price
+1085,2024-04-14,FAH,  Bangkok ,cake,1.0,4.00
+1133,29 Apr 2024,GUS,phuket,MOCHA,1.0,5
+1141,"January 18, 2024",EVE,PHUKET,mocha,1.0,5.00
+1051,2024-06-24,DARA,Phuket,MOCHA,,5
+1272,06 Feb 2024,GUS,bangkok,CAKE,5.0,4
+1269,2024-03-24,FAH,CHIANG MAI,  Espresso ,2.0,$3.00
+1057,16 Apr 2024,Chai,Phuket,espresso,1.0,3.00
+1252,"April 26, 2024",gus,  Bangkok ,Tea,5.0,$2.50
+1091,"March 08, 2024",  Dara ,Bangkok,mocha,5.0,5.00
+1049,25 May 2024,fah,Chiang Mai,  Tea ,2.0,2.50
+1102,"February 24, 2024",Dara,phuket,espresso,3.0,3.00
+1239,"April 15, 2024",DARA,CHIANG MAI,  Espresso ,1.0,$3.00
+1216,10 Jan 2024,Fah,  Bangkok ,Mocha,4.0,5
+1256,2024-02-27,DARA,Chiang Mai,  Cake ,4.0,4.00
+1067,2024-06-14,  Eve ,bangkok,  Espresso ,5.0,3.00
+1163,"April 17, 2024",  Dara ,bangkok,TEA,3.0,$2.50
+1296,04 Mar 2024,BEN,PHUKET,MOCHA,5.0,N/A
+1048,"March 18, 2024",Eve,BANGKOK,LATTE,4.0,$4.50
+1285,2024-06-28,eve,  Bangkok ,ESPRESSO,4.0,3.00
+1277,2024-02-23,  Gus ,Chiangmai,mocha,1.0,5.00
+1278,09 May 2024,FAH,BANGKOK,  Espresso ,5.0,N/A
+1155,20 May 2024,eve,  Bangkok ,cake,2.0,4.00
+1270,2024-06-09,gus,bangkok,latte,3.0,4.5
+1294,09 Jun 2024,FAH,Bangkok,Tea,2.0,2.5
+1107,14 Jan 2024,Dara,Bangkok,Espresso,3.0,3
+1182,"January 08, 2024",gus,BANGKOK,Tea,3.0,$2.50
+1124,"January 28, 2024",Fah,chiang mai,tea,2.0,2.5
+1271,24 Jun 2024,Ben,phuket,TEA,5.0,2.5
+1157,2024-04-01,  Ben ,Phuket,Cake,5.0,$4.00
+1140,02 May 2024,Ada,Chiangmai,latte,4.0,4.50
+1260,06 Jan 2024,BEN,Chiangmai,espresso,3.0,$3.00
+1276,2024-02-16,  Chai ,BANGKOK,CAKE,4.0,4
+1025,18 Feb 2024,chai,chiang mai,  Tea ,5.0,2.5
+1034,02 Feb 2024,  Fah ,Phuket,Tea,5.0,$2.50
+1044,"February 26, 2024",  Dara ,  Bangkok ,  Latte ,4.0,$4.50
+1193,24 Apr 2024,  Dara ,  Chiang Mai ,Latte,2.0,4.5
+1177,2024-03-11,ben,bangkok,ESPRESSO,5.0,3
+1198,27 Jan 2024,ADA,  Bangkok ,tea,1.0,N/A
+1132,17 Apr 2024,chai,phuket,cake,2.0,4.00
+1178,"March 17, 2024",eve,BANGKOK,Tea,1.0,2.5
+1231,15 Feb 2024,FAH,bangkok,cake,3.0,4
+1043,23 Feb 2024,fah,chiang mai,Cake,1.0,4.00
+1168,04 Apr 2024,  Ada ,chiang mai,  Cake ,1.0,4
+1250,01 May 2024,Chai,bangkok,  Mocha ,1.0,5
+1054,17 May 2024,  Fah ,CHIANG MAI,Espresso,1.0,3.00
+1150,"February 27, 2024",CHAI,Phuket,MOCHA,3.0,$5.00
+1253,"February 21, 2024",ben,chiang mai,mocha,4.0,$5.00
+1254,"April 05, 2024",Ben,  Bangkok ,Latte,2.0,$4.50
+1242,15 Mar 2024,  Ada ,BANGKOK,cake,2.0,$4.00
+1050,29 Mar 2024,  Ben ,  Bangkok ,espresso,4.0,3
+1022,30 Apr 2024,  Fah ,  Bangkok ,LATTE,5.0,$4.50
+1089,2024-03-23,GUS,Chiang Mai,Mocha,2.0,$5.00
+1120,"February 06, 2024",BEN,Bangkok,  Mocha ,3.0,5
+1195,18 Mar 2024,  Eve ,BANGKOK,MOCHA,4.0,$5.00
+1167,2024-02-27,DARA,  Bangkok ,mocha,4.0,5.00
+1047,"March 12, 2024",  Dara ,  Chiang Mai ,Latte,3.0,4.50
+1097,"February 26, 2024",ada,  Bangkok ,Mocha,4.0,$5.00
+1299,16 Jun 2024,ADA,  Phuket ,  Cake ,5.0,$4.00
+1213,2024-04-06,chai,bangkok,MOCHA,1.0,$5.00
+1245,"January 13, 2024",Ben,bangkok,CAKE,2.0,4.00
+1063,"February 21, 2024",dara,BANGKOK,Tea,4.0,2.50
+1116,2024-03-20,CHAI,Bangkok,Mocha,3.0,5.00
+1196,2024-01-26,BEN,phuket,Latte,4.0,4.5
+1061,2024-05-23,chai,  Bangkok ,TEA,1.0,$2.50
+1238,2024-05-10,chai,Bangkok,espresso,4.0,3
+1222,11 Jan 2024,  Eve ,Chiang Mai,MOCHA,,$5.00
+1194,10 Jan 2024,  Ada ,PHUKET,Latte,1.0,4.5
+1279,"May 23, 2024",Fah,  Phuket ,ESPRESSO,2.0,$3.00
+1040,2024-02-27,dara,Chiang Mai,tea,5.0,2.50
+1158,"March 02, 2024",Gus,CHIANG MAI,MOCHA,5.0,5
+1099,08 Apr 2024,DARA,bangkok,  Tea ,1.0,2.50
+1026,02 Mar 2024,Gus,BANGKOK,Espresso,4.0,$3.00
+1214,2024-05-24,  Fah ,Bangkok,MOCHA,1.0,5
+1062,"April 29, 2024",CHAI,  Bangkok ,LATTE,1.0,$4.50
+1052,14 May 2024,  Ada ,  Bangkok ,  Mocha ,2.0,$5.00
+1185,2024-03-28,Ada,Phuket,latte,5.0,$4.50
+1258,"January 30, 2024",  Chai ,CHIANG MAI,ESPRESSO,2.0,3.00
+1100,"June 09, 2024",Ada,Bangkok,  Latte ,3.0,4.50
+1012,2024-04-03,  Fah ,Phuket,TEA,3.0,N/A
+1018,"May 16, 2024",Fah,BANGKOK,LATTE,5.0,4.5
+1135,2024-04-11,Gus,CHIANG MAI,  Latte ,1.0,4.50
+1068,09 Jun 2024,  Fah ,  Bangkok ,TEA,2.0,$2.50
+1210,"April 25, 2024",  Gus ,Chiangmai,Espresso,1.0,3.00
+1069,"February 02, 2024",Dara,bangkok,CAKE,4.0,$4.00
+1244,07 Jan 2024,  Fah ,CHIANG MAI,mocha,1.0,$5.00
+1234,"March 01, 2024",GUS,PHUKET,  Espresso ,1.0,3.00
+1128,03 Apr 2024,fah,  Chiang Mai ,mocha,4.0,$5.00
+1146,"April 17, 2024",eve,phuket,tea,3.0,N/A
+1109,"February 02, 2024",ada,chiang mai,MOCHA,4.0,$5.00
+1090,31 Jan 2024,EVE,phuket,ESPRESSO,4.0,3
+1171,2024-06-22,gus,BANGKOK,MOCHA,5.0,5
+1179,"June 30, 2024",  Ada ,bangkok,  Mocha ,2.0,5
+1266,13 Mar 2024,GUS,  Bangkok ,Mocha,1.0,5
+1103,2024-04-08,CHAI,Chiangmai,Tea,2.0,2.50
+1218,"April 03, 2024",ada,bangkok,latte,3.0,$4.50
+1007,"March 09, 2024",gus,Phuket,latte,1.0,$4.50
+1108,2024-05-02,Fah,chiang mai,TEA,4.0,2.5
+1139,"June 14, 2024",ada,  Phuket ,tea,5.0,N/A
+1156,2024-04-20,  Gus ,Bangkok,Espresso,3.0,$3.00
+1186,2024-04-11,  Eve ,Phuket,  Espresso ,5.0,3.00
+1142,"June 24, 2024",  Ben ,bangkok,TEA,5.0,$2.50
+1038,"April 29, 2024",Ada,phuket,LATTE,1.0,$4.50
+1118,2024-01-28,Fah,CHIANG MAI,espresso,3.0,N/A
+1237,"March 27, 2024",BEN,Chiang Mai,MOCHA,2.0,5
+1072,14 Mar 2024,GUS,  Bangkok ,  Mocha ,2.0,5
+1019,28 Mar 2024,gus,  Phuket ,Cake,99.0,$4.00
+1261,2024-02-15,dara,Chiangmai,CAKE,4.0,$4.00
+1094,2024-02-23,BEN,  Bangkok ,Latte,3.0,$4.50
+1282,"March 03, 2024",dara,Bangkok,Latte,2.0,4.5
+1003,2024-02-27,  Gus ,chiang mai,  Espresso ,1.0,3.00
+1096,2024-01-20,  Eve ,bangkok,cake,2.0,N/A
+1162,06 Jun 2024,  Chai ,PHUKET,CAKE,2.0,4.00
+1024,"March 03, 2024",Ada,  Bangkok ,TEA,1.0,2.5
+1004,29 May 2024,Ada,Bangkok,Mocha,5.0,5.00
+1056,22 Mar 2024,  Ben ,Bangkok,espresso,,3.00
+1224,"January 18, 2024",Fah,Chiangmai,cake,1.0,4
+1032,02 Feb 2024,FAH,bangkok,cake,,$4.00
+1085,2024-04-14,FAH,  Bangkok ,cake,1.0,4.00
+1076,2024-06-30,  Ben ,phuket,mocha,3.0,5.00
+1029,10 May 2024,  Ben ,Chiangmai,cake,1.0,$4.00
+1084,20 Mar 2024,  Fah ,Chiang Mai,MOCHA,5.0,N/A
+1287,29 Apr 2024,Dara,Bangkok,TEA,5.0,2.50
+1027,"March 07, 2024",  Ada ,Chiangmai,ESPRESSO,1.0,3
+1283,"April 21, 2024",  Eve ,Chiangmai,CAKE,1.0,$4.00
+1046,22 Jan 2024,dara,phuket,Latte,3.0,$4.50
+1197,"April 02, 2024",  Ben ,PHUKET,Latte,1.0,4.5
+1160,27 Feb 2024,CHAI,chiang mai,  Cake ,4.0,4.00
+1228,15 Jan 2024,Ada,bangkok,Espresso,2.0,3.00
+1291,"May 12, 2024",dara,BANGKOK,  Tea ,1.0,$2.50
+1192,22 May 2024,EVE,bangkok,CAKE,99.0,$4.00
+1026,02 Mar 2024,Gus,BANGKOK,Espresso,4.0,$3.00
+1187,2024-05-25,dara,Chiangmai,CAKE,,4.00
+1086,11 Jan 2024,  Ada ,  Chiang Mai ,  Latte ,5.0,4.5
+1110,"March 27, 2024",  Chai ,BANGKOK,  Espresso ,4.0,$3.00
+1080,2024-05-28,Chai,BANGKOK,  Tea ,3.0,2.50
+1075,"March 17, 2024",  Chai ,Bangkok,MOCHA,2.0,5.00
+1041,03 Jun 2024,eve,Phuket,TEA,4.0,2.50
+1300,"June 25, 2024",  Ada ,  Bangkok ,CAKE,4.0,$4.00
+1274,2024-02-24,  Chai ,Bangkok,Espresso,1.0,3.00
+1200,2024-03-03,BEN,PHUKET,Espresso,5.0,3
+1203,01 Apr 2024,BEN,  Bangkok ,espresso,5.0,3
+1201,"January 04, 2024",  Ada ,phuket,Tea,1.0,2.5
+1226,2024-05-23,  Fah ,  Bangkok ,latte,5.0,$4.50
+1249,07 Feb 2024,  Eve ,bangkok,Mocha,4.0,5
+1154,11 Jun 2024,Ada,Bangkok,  Latte ,3.0,4.50
+1280,2024-01-24,BEN,Bangkok,Mocha,5.0,5.00
+1164,05 Mar 2024,Eve,bangkok,  Cake ,3.0,4.00
+1293,"January 24, 2024",chai,BANGKOK,Tea,5.0,$2.50
+1035,"April 09, 2024",EVE,Chiang Mai,  Latte ,1.0,$4.50
+1212,2024-01-01,  Dara ,CHIANG MAI,TEA,2.0,$2.50
+1230,2024-06-28,eve,BANGKOK,  Mocha ,5.0,5
+1088,2024-06-18,  Ada ,BANGKOK,Espresso,3.0,$3.00
+1098,2024-03-26,EVE,bangkok,mocha,4.0,$5.00
+1115,"June 01, 2024",  Ben ,Phuket,CAKE,3.0,N/A
+1202,23 Jan 2024,Dara,  Bangkok ,Tea,,$2.50
+1227,"March 20, 2024",chai,Chiang Mai,LATTE,3.0,$4.50
+1183,2024-04-04,  Ada ,CHIANG MAI,  Latte ,3.0,$4.50
+1169,"March 29, 2024",BEN,BANGKOK,  Tea ,4.0,2.50
+1105,2024-04-22,  Eve ,bangkok,tea,5.0,2.5
+1241,"January 02, 2024",ben,  Bangkok ,Tea,1.0,$2.50
+1010,11 Jun 2024,  Dara ,Phuket,espresso,2.0,$3.00
+1130,21 Mar 2024,Ada,PHUKET,CAKE,2.0,4.00
+1017,2024-06-17,Dara,chiang mai,ESPRESSO,5.0,3.00
+1078,18 Jan 2024,ada,chiang mai,Espresso,5.0,3.00
+1153,2024-05-30,Ada,  Chiang Mai ,tea,5.0,$2.50
+1055,"January 30, 2024",  Gus ,Bangkok,  Latte ,3.0,$4.50
+1020,"April 05, 2024",Gus,Bangkok,LATTE,5.0,$4.50
+1292,20 May 2024,Ben,PHUKET,tea,4.0,2.5
+1152,"April 22, 2024",  Dara ,chiang mai,Tea,4.0,2.5
+1002,2024-04-29,eve,  Bangkok ,CAKE,4.0,$4.00
+1175,"June 10, 2024",Dara,PHUKET,latte,5.0,4.50
+1131,23 Feb 2024,Chai,Chiang Mai,mocha,2.0,N/A
+1001,2024-03-12,fah,Bangkok,  Mocha ,5.0,$5.00
+1101,17 Jun 2024,Ben,  Bangkok ,  Tea ,1.0,2.5
+1172,"April 09, 2024",Eve,bangkok,TEA,3.0,2.5
+1220,18 Mar 2024,Ben,BANGKOK,  Tea ,3.0,2.5
+1281,"April 11, 2024",GUS,Chiang Mai,  Espresso ,3.0,3.00
+1144,"January 10, 2024",ADA,Chiang Mai,Mocha,3.0,$5.00
+1199,"April 02, 2024",CHAI,Chiang Mai,TEA,5.0,$2.50
+1060,"January 25, 2024",Ben,Chiangmai,latte,1.0,N/A
+1149,2024-04-04,CHAI,Bangkok,  Espresso ,2.0,3
+1013,2024-05-17,  Eve ,phuket,latte,,$4.50
+1122,"February 09, 2024",CHAI,chiang mai,espresso,3.0,3
+1137,2024-02-25,FAH,phuket,TEA,3.0,2.5
+1240,2024-01-10,DARA,CHIANG MAI,Latte,2.0,4.50
+1275,"June 30, 2024",CHAI,Bangkok,ESPRESSO,4.0,$3.00
+1058,07 Feb 2024,DARA,bangkok,tea,3.0,2.5
+1123,2024-04-17,  Ben ,BANGKOK,Tea,5.0,$2.50
+1262,"May 09, 2024",EVE,Chiangmai,TEA,3.0,$2.50
+1235,"March 20, 2024",  Fah ,  Chiang Mai ,  Espresso ,5.0,3.00
+1064,14 May 2024,  Gus ,  Phuket ,espresso,2.0,3.00
+1288,"May 03, 2024",Eve,  Bangkok ,LATTE,2.0,$4.50
+1223,"January 06, 2024",ada,Phuket,mocha,3.0,5.00
+1212,2024-01-01,  Dara ,CHIANG MAI,TEA,2.0,$2.50
+1125,23 Apr 2024,ada,  Phuket ,  Tea ,1.0,$2.50
+1016,2024-05-02,EVE,bangkok,Cake,4.0,$4.00
+1289,12 Jun 2024,gus,PHUKET,  Latte ,5.0,$4.50
+1011,2024-03-21,ADA,Phuket,  Espresso ,1.0,N/A
+1243,2024-06-14,  Dara ,phuket,Mocha,3.0,5
+1265,"March 14, 2024",DARA,Bangkok,  Mocha ,4.0,5.00
+1170,2024-05-07,EVE,  Bangkok ,MOCHA,3.0,5
+1037,2024-03-22,dara,Bangkok,  Latte ,4.0,4.50
+1247,2024-03-23,Ben,  Bangkok ,TEA,5.0,$2.50
+1005,2024-06-03,Fah,Phuket,ESPRESSO,1.0,3.00
+1225,"May 05, 2024",Dara,chiang mai,Cake,,4.00
+1093,2024-02-19,eve,bangkok,  Tea ,1.0,$2.50
+1117,"February 03, 2024",eve,chiang mai,TEA,3.0,$2.50
+1059,22 Jan 2024,Chai,Bangkok,TEA,3.0,2.5
+1023,13 Feb 2024,chai,bangkok,tea,1.0,2.5
+1082,"March 20, 2024",Ben,bangkok,CAKE,4.0,4
+1053,"May 08, 2024",DARA,phuket,tea,2.0,2.5
+1290,"February 03, 2024",chai,bangkok,LATTE,5.0,$4.50
+1014,06 May 2024,Dara,bangkok,latte,5.0,$4.50
+1202,23 Jan 2024,Dara,  Bangkok ,Tea,,$2.50
+1161,18 Feb 2024,ADA,Bangkok,  Tea ,3.0,$2.50
+1073,2024-04-27,gus,phuket,MOCHA,1.0,5.00
+1178,"March 17, 2024",eve,BANGKOK,Tea,1.0,2.5
+1021,17 Feb 2024,eve,Bangkok,ESPRESSO,3.0,3.00
+1112,2024-05-15,Gus,  Bangkok ,cake,5.0,$4.00
+1036,"March 30, 2024",  Ben ,bangkok,LATTE,1.0,4.50
+1071,2024-03-12,Ben,  Bangkok ,MOCHA,1.0,5
+1208,"February 01, 2024",Dara,Bangkok,espresso,5.0,3.00
+1221,"February 16, 2024",  Ada ,  Chiang Mai ,  Mocha ,3.0,$5.00
+1121,"February 28, 2024",gus,bangkok,CAKE,2.0,$4.00
+1217,10 Mar 2024,Chai,Bangkok,Espresso,3.0,3.00
+1030,"March 21, 2024",dara,  Chiang Mai ,latte,4.0,4.50
+1267,07 Apr 2024,ada,bangkok,  Cake ,5.0,4
+1189,2024-06-14,Eve,Chiangmai,Mocha,4.0,$5.00
+1286,"June 18, 2024",eve,Bangkok,  Tea ,2.0,2.5
+1070,2024-05-20,DARA,BANGKOK,  Cake ,3.0,4
+1181,"January 28, 2024",Ben,CHIANG MAI,MOCHA,99.0,$5.00
+1151,"February 28, 2024",  Chai ,BANGKOK,CAKE,5.0,4.00
+1251,"April 05, 2024",  Ben ,Chiangmai,tea,3.0,$2.50
+1295,07 May 2024,eve,  Chiang Mai ,MOCHA,,5.00
+1248,11 Feb 2024,Ben,bangkok,Mocha,1.0,$5.00
+1166,2024-06-24,BEN,Chiangmai,LATTE,3.0,4.50
+1127,2024-05-04,GUS,PHUKET,ESPRESSO,1.0,3
+1297,2024-03-29,dara,chiang mai,Tea,3.0,2.50
+1219,2024-03-27,Ben,bangkok,ESPRESSO,5.0,$3.00
+1249,07 Feb 2024,  Eve ,bangkok,Mocha,4.0,5
+1065,"May 06, 2024",dara,  Bangkok ,Espresso,1.0,3.00
+1264,"June 29, 2024",fah,Bangkok,Latte,5.0,4.50
+1215,07 Jan 2024,ADA,Bangkok,  Cake ,1.0,4.00
+1273,2024-05-08,  Ben ,CHIANG MAI,latte,3.0,N/A
+1135,2024-04-11,Gus,CHIANG MAI,  Latte ,1.0,4.50
+1129,13 Jun 2024,chai,Phuket,cake,5.0,$4.00
+1083,28 Apr 2024,DARA,BANGKOK,  Cake ,4.0,4.00
+1263,2024-01-04,Ben,  Bangkok ,cake,5.0,4.00
+1176,2024-03-14,FAH,Bangkok,MOCHA,4.0,5.00
+1143,09 May 2024,  Gus ,Chiang Mai,MOCHA,1.0,5.00
+1134,"March 20, 2024",Eve,  Bangkok ,  Espresso ,1.0,3
+1173,2024-05-25,  Ben ,  Phuket ,CAKE,3.0,$4.00
+1077,2024-02-01,  Gus ,phuket,  Mocha ,1.0,5.00
+1033,2024-05-01,fah,  Bangkok ,MOCHA,,5
+1032,02 Feb 2024,FAH,bangkok,cake,,$4.00
+1233,07 Apr 2024,  Chai ,Chiang Mai,Mocha,4.0,$5.00
+1236,26 Mar 2024,chai,CHIANG MAI,Latte,2.0,4.50
+1188,2024-04-03,GUS,phuket,Cake,,4
+1174,"April 18, 2024",  Gus ,  Bangkok ,Cake,1.0,$4.00
+1284,11 Apr 2024,  Eve ,  Bangkok ,mocha,99.0,5.00
+1039,30 May 2024,Chai,CHIANG MAI,cake,,4.00
+1015,"January 25, 2024",  Dara ,Bangkok,LATTE,3.0,$4.50
+1095,2024-05-12,DARA,  Chiang Mai ,Cake,4.0,$4.00
+1017,2024-06-17,Dara,chiang mai,ESPRESSO,5.0,3.00
+1218,"April 03, 2024",ada,bangkok,latte,3.0,$4.50
+1079,"January 06, 2024",BEN,  Bangkok ,  Mocha ,2.0,5
+1092,01 Mar 2024,FAH,CHIANG MAI,Espresso,4.0,3
+1184,"May 26, 2024",  Eve ,CHIANG MAI,Cake,5.0,4
+1268,26 Apr 2024,CHAI,bangkok,espresso,4.0,$3.00
+1191,2024-05-13,ADA,Chiangmai,LATTE,1.0,4.5
+1287,29 Apr 2024,Dara,Bangkok,TEA,5.0,2.50
+1110,"March 27, 2024",  Chai ,BANGKOK,  Espresso ,4.0,$3.00
+1136,"March 26, 2024",fah,Chiang Mai,TEA,3.0,2.5
+1246,2024-05-03,CHAI,CHIANG MAI,MOCHA,4.0,5
+1148,30 Mar 2024,ada,Chiangmai,MOCHA,5.0,5
+1106,28 Jan 2024,CHAI,Chiangmai,TEA,3.0,2.50
+1259,2024-04-26,dara,  Phuket ,cake,1.0,$4.00
+1298,"March 30, 2024",FAH,bangkok,Espresso,1.0,3
+1180,2024-04-21,  Eve ,Chiang Mai,  Cake ,5.0,4
+1165,2024-06-06,Ben,BANGKOK,Latte,5.0,4.5
+1111,2024-01-19,Ada,bangkok,Mocha,4.0,N/A
+1257,13 Mar 2024,ada,CHIANG MAI,latte,5.0,$4.50
+1006,06 Apr 2024,  Fah ,  Bangkok ,mocha,,5
+1145,"May 12, 2024",GUS,Phuket,  Cake ,3.0,4
+1104,"January 05, 2024",chai,BANGKOK,  Espresso ,5.0,$3.00
+1211,2024-03-12,Gus,chiang mai,CAKE,1.0,4.00
+1042,03 Feb 2024,  Ada ,Chiang Mai,  Espresso ,2.0,3
+1138,27 Feb 2024,ada,BANGKOK,  Cake ,1.0,$4.00
+1255,2024-06-05,GUS,  Chiang Mai ,cake,2.0,$4.00
+1147,15 Jun 2024,Ada,  Chiang Mai ,  Tea ,5.0,$2.50
+1126,"March 01, 2024",Gus,Chiang Mai,Espresso,,3.00
+1087,29 Jan 2024,Ada,bangkok,CAKE,3.0,4.00
+1031,2024-06-21,Ben,  Bangkok ,  Tea ,2.0,2.50
+1066,"May 28, 2024",CHAI,Bangkok,Mocha,1.0,5.00
+1204,"January 15, 2024",ada,  Chiang Mai ,Tea,5.0,2.50
+1206,2024-05-18,Ada,BANGKOK,cake,3.0,4.00
+1045,2024-06-22,Gus,bangkok,  Cake ,1.0,4
+1028,"January 16, 2024",Dara,  Phuket ,CAKE,5.0,$4.00
+1081,2024-03-15,DARA,Bangkok,Mocha,5.0,$5.00
+1114,2024-04-14,fah,BANGKOK,cake,1.0,4.00
+1205,2024-06-04,  Dara ,BANGKOK,Mocha,2.0,$5.00
+1008,"January 08, 2024",  Chai ,BANGKOK,Mocha,5.0,5.00
+1209,2024-05-24,  Gus ,chiang mai,ESPRESSO,4.0,3
+1159,2024-05-19,Chai,Bangkok,CAKE,4.0,4.00
+1113,19 May 2024,Ben,bangkok,  Latte ,5.0,4.50
+1232,"March 30, 2024",ben,bangkok,  Tea ,2.0,2.5
+1229,2024-03-16,ben,BANGKOK,  Cake ,4.0,4.00
+1009,29 May 2024,BEN,Bangkok,Mocha,3.0,5.00
+1074,"April 19, 2024",  Ben ,bangkok,tea,4.0,$2.50
+1119,"February 09, 2024",ben,bangkok,LATTE,4.0,4.50
+1190,26 Apr 2024,CHAI,bangkok,mocha,5.0,5.00
+1207,2024-05-09,GUS,bangkok,Latte,5.0,$4.50

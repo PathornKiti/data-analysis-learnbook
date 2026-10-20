@@ -72,7 +72,56 @@ def make_daily_rides() -> pd.DataFrame:
     return df
 
 
+PRICES = {"Latte": 4.5, "Espresso": 3.0, "Mocha": 5.0, "Tea": 2.5, "Cake": 4.0}
+
+
+def make_messy_orders(n: int = 300) -> pd.DataFrame:
+    """Coffee-shop orders, deliberately messy for the cleaning module.
+
+    Problems planted on purpose: duplicate rows, inconsistent text (case, spaces,
+    spelling variants), dates in several formats, prices stored as text with '$'
+    or 'N/A', missing quantities, and a few impossible quantities (typos).
+    """
+    items = rng.choice(list(PRICES), size=n)
+    cities = rng.choice(["Bangkok", "Chiang Mai", "Phuket"], size=n, p=[0.5, 0.3, 0.2])
+    customers = rng.choice(["Ada", "Ben", "Chai", "Dara", "Eve", "Fah", "Gus"], size=n)
+    dates = pd.Timestamp("2024-01-01") + pd.to_timedelta(rng.integers(0, 182, size=n), unit="D")
+    qty = rng.integers(1, 6, size=n).astype(float)
+
+    def messy_text(value: str) -> str:
+        style = rng.integers(0, 4)
+        return [value, value.lower(), value.upper(), f"  {value} "][style]
+
+    def messy_date(d: pd.Timestamp) -> str:
+        style = rng.integers(0, 3)
+        return [d.strftime("%Y-%m-%d"), d.strftime("%B %d, %Y"), d.strftime("%d %b %Y")][style]
+
+    def messy_price(p: float) -> str:
+        r = rng.random()
+        if r < 0.04:
+            return "N/A"
+        return [f"${p:.2f}", f"{p:.2f}", f"{p:g}"][rng.integers(0, 3)]
+
+    df = pd.DataFrame(
+        {
+            "order_id": np.arange(1001, 1001 + n),
+            "order_date": [messy_date(d) for d in dates],
+            "customer": [messy_text(c) for c in customers],
+            "city": [messy_text(c) if c != "Chiang Mai" or rng.random() > 0.2 else "Chiangmai"
+                     for c in cities],
+            "item": [messy_text(i) for i in items],
+            "quantity": qty,
+            "unit_price": [messy_price(PRICES[i]) for i in items],
+        }
+    )
+    df.loc[rng.choice(n, size=15, replace=False), "quantity"] = np.nan   # missing
+    df.loc[rng.choice(n, size=4, replace=False), "quantity"] = 99        # typo: 99 not 9
+    duplicates = df.sample(12, random_state=3)
+    return pd.concat([df, duplicates], ignore_index=True).sample(frac=1, random_state=5).reset_index(drop=True)
+
+
 if __name__ == "__main__":
     make_students().to_csv(OUT / "students.csv", index=False)
     make_daily_rides().to_csv(OUT / "daily_rides.csv", index=False)
-    print("Wrote students.csv and daily_rides.csv to", OUT)
+    make_messy_orders().to_csv(OUT / "messy_orders.csv", index=False)
+    print("Wrote students.csv, daily_rides.csv and messy_orders.csv to", OUT)

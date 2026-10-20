@@ -29,9 +29,9 @@ You don't finish this course with exercises. You finish it with *something you b
 | 2 | [Project kickoff](modules/02-project-kickoff/) | ✅ available |
 | 3 | [NumPy](modules/03-numpy/) | ✅ available |
 | 4 | [pandas I: tables](modules/04-pandas-1/) | ✅ available |
-| 5 | pandas II: cleaning | 🚧 planned |
-| 6 | Visualization & EDA | 🚧 planned |
-| 6.5 | From notebook to module | 🚧 planned |
+| 5 | [pandas II: cleaning](modules/05-pandas-2-cleaning/) | ✅ available |
+| 6 | [Visualization & EDA](modules/06-visualization-eda/) | ✅ available |
+| 6.5 | [From notebook to module](modules/06b-notebook-to-module/) | ✅ available |
 | 7 | Probability | 🚧 planned |
 | 8 | Statistical inference | 🚧 planned |
 | 9 | Linear regression | 🚧 planned |

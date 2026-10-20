@@ -27,7 +27,7 @@ By the end, a student can:
 | 4 | pandas I | read_csv, select, filter, groupby | mean/median/variance/quantiles | first look at your data |
 | 5 | pandas II: cleaning | missing data, dtypes, merges, dates | percentages, ratios, logs | **`clean.py`** |
 | 6 | Visualization & EDA | matplotlib, seaborn | distributions, correlation | **`plots.py`** + EDA notebook |
-| 6.5 | From notebook to module | scripts, imports, packages, refactoring | – | project restructured as a package |
+| 6.5 | From notebook to module (`06b-…`) | scripts, imports, packages, refactoring | – | project restructured as a package |
 | 7 | Probability | simulation | probability rules, distributions, LLN | – |
 | 8 | Statistical inference | scipy, bootstrap | sampling, confidence intervals, hypothesis tests | **`analysis.py`** |
 | 9 | Linear regression | scikit-learn, statsmodels | slope/intercept, least squares, derivatives & gradient descent | first model |

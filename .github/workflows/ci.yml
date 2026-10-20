@@ -58,6 +58,9 @@ jobs:
           assert s.shape == (200, 7), s.shape
           assert r.shape == (366, 5), r.shape
           assert r["temp_c"].isna().sum() == 6
+          o = pd.read_csv("data/messy_orders.csv")
+          assert o.shape == (312, 7), o.shape
+          assert o.duplicated().sum() == 12
           print("datasets OK")
           PY
 
@@ -82,3 +85,21 @@ jobs:
           for nb in notebooks/*.ipynb; do
             jupyter nbconvert --to notebook --execute --output-dir "$RUNNER_TEMP/out" "$nb"
           done
+
+  module-6b-package:
+    name: Module 6.5 exercise package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy pandas pytest
+      - name: Reference solution passes all tests
+        working-directory: solutions/06b-notebook-to-module/exercise
+        run: pytest -q
+      - name: Student exercise collects and is still a stub (tests must fail until implemented)
+        working-directory: modules/06b-notebook-to-module/exercise
+        run: |
+          pytest --collect-only -q
+          if pytest -q -x; then echo "Exercise tests pass without work: stubs were filled in!"; exit 1; fi
