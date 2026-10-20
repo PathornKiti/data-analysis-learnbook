@@ -32,8 +32,8 @@ You don't finish this course with exercises. You finish it with *something you b
 | 5 | [pandas II: cleaning](modules/05-pandas-2-cleaning/) | ✅ available |
 | 6 | [Visualization & EDA](modules/06-visualization-eda/) | ✅ available |
 | 6.5 | [From notebook to module](modules/06b-notebook-to-module/) | ✅ available |
-| 7 | Probability | 🚧 planned |
-| 8 | Statistical inference | 🚧 planned |
+| 7 | [Probability](modules/07-probability/) | ✅ available |
+| 8 | [Statistical inference](modules/08-statistical-inference/) | ✅ available |
 | 9 | Linear regression | 🚧 planned |
 | 10 | Prediction & evaluation | 🚧 planned |
 | 11 | Communicating results | 🚧 planned |

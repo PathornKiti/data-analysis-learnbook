@@ -5,7 +5,7 @@ Steps: load raw data -> clean -> add features -> analyse -> save outputs.
 import argparse
 from pathlib import Path
 
-from myproject.analysis import correlation, group_summary
+from myproject.analysis import cohens_d, correlation, group_summary, mean_ci, permutation_test
 from myproject.clean import clean
 from myproject.features import add_score_band
 from myproject.load import load_raw
@@ -27,6 +27,16 @@ def main(input_path: Path) -> None:
     print(group_summary(df, by="part_time_job", value="exam_score"))
     r = correlation(df, "study_hours_week", "exam_score")
     print(f"\nCorrelation between study hours and exam score: {r:.2f}")
+
+    low, high = mean_ci(df["exam_score"])
+    print(f"Mean exam score: {df['exam_score'].mean():.1f} (95% CI {low:.1f} to {high:.1f})")
+
+    job = df.loc[df["part_time_job"] == "yes", "exam_score"]
+    no_job = df.loc[df["part_time_job"] == "no", "exam_score"]
+    print(
+        f"No job minus job: {no_job.mean() - job.mean():.1f} points, "
+        f"permutation p = {permutation_test(no_job, job):.3f}, Cohen's d = {cohens_d(no_job, job):.2f}"
+    )
 
     ax = scatter_with_trend(df, "study_hours_week", "exam_score")
     fig_path = save_figure(ax, ROOT / "reports" / "figures" / "study_vs_score.png")
