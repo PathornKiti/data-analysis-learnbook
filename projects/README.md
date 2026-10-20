@@ -31,3 +31,7 @@ reproducible analysis, organised as a **Python package** rather than a single me
 * **One command reproduces everything:** `python run_analysis.py`.
 * **No copy-paste.** If you write something twice, make it a function in `src/`.
 * **Respect licences and privacy.** Never publish personal data. Cite your sources.
+
+## Worked example and the project doctor
+* [`worked-example/`](worked-example/) is a finished project (bike-share demand) in exactly this structure. Study it, then build your own.
+* **Project doctor:** `python projects/check_project.py path/to/your/project` checks the structure, README sections, tests, absolute paths, and runs your pipeline from a clean copy. Fix every ❌ before you submit. See also [`../modules/12-capstone/`](../modules/12-capstone/).

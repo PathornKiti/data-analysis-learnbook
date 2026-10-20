@@ -25,7 +25,8 @@ src/myproject/
     load.py              read raw data (never modifies it)
     clean.py             cleaning functions
     features.py          derived columns
-    analysis.py          statistics / models
+    analysis.py          statistics: group summaries, CIs, bootstrap, permutation test, effect size
+    model.py             fit / evaluate models (statsmodels + scikit-learn)
     plots.py             reusable chart functions
 tests/                   pytest checks for the trickiest functions
 notebooks/
@@ -41,5 +42,16 @@ reports/figures/         generated charts (git-ignored)
 * **Raw data never changes**, so you can always start over.
 * **One entry point** means a stranger (or you in six months) can reproduce the result.
 
+## Data
+(Where the data come from, the licence, what one row is, and how big it is. Link your `DATA_CARD.md`; copy the templates from `../templates/`.)
+
 ## Findings
-(Write your conclusions and limitations here at the end of the project.)
+(Your answer to the question with numbers, units and uncertainty; 3-5 bullets. Then a few key figures from `reports/figures/`.)
+
+## Limitations
+(What could be wrong? Sampling, measurement, confounding, where a model might fail. See `../templates/ETHICS_CHECKLIST.md`.)
+
+## Check your project
+```bash
+python ../check_project.py .        # the "project doctor": lists what still needs fixing
+```
