@@ -26,6 +26,7 @@ src/myproject/
     clean.py             cleaning functions
     features.py          derived columns
     analysis.py          statistics: group summaries, CIs, bootstrap, permutation test, effect size
+    model.py             fit / evaluate models (statsmodels + scikit-learn)
     plots.py             reusable chart functions
 tests/                   pytest checks for the trickiest functions
 notebooks/

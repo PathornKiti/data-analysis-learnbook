@@ -34,8 +34,8 @@ You don't finish this course with exercises. You finish it with *something you b
 | 6.5 | [From notebook to module](modules/06b-notebook-to-module/) | ✅ available |
 | 7 | [Probability](modules/07-probability/) | ✅ available |
 | 8 | [Statistical inference](modules/08-statistical-inference/) | ✅ available |
-| 9 | Linear regression | 🚧 planned |
-| 10 | Prediction & evaluation | 🚧 planned |
+| 9 | [Linear regression](modules/09-linear-regression/) | ✅ available |
+| 10 | [Prediction & evaluation](modules/10-prediction-evaluation/) | ✅ available |
 | 11 | Communicating results | 🚧 planned |
 | 12 | Capstone | 🚧 planned |
 

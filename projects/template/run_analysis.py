@@ -9,6 +9,7 @@ from myproject.analysis import cohens_d, correlation, group_summary, mean_ci, pe
 from myproject.clean import clean
 from myproject.features import add_score_band
 from myproject.load import load_raw
+from myproject.model import coefficient_table, cross_val_r2, evaluate_regression, fit_ols
 from myproject.plots import save_figure, scatter_with_trend
 
 ROOT = Path(__file__).resolve().parent
@@ -36,6 +37,16 @@ def main(input_path: Path) -> None:
     print(
         f"No job minus job: {no_job.mean() - job.mean():.1f} points, "
         f"permutation p = {permutation_test(no_job, job):.3f}, Cohen's d = {cohens_d(no_job, job):.2f}"
+    )
+
+    features = ["study_hours_week", "sleep_hours", "attendance_pct"]
+    print("\nRegression of exam_score on study, sleep, attendance and job (coefficients with 95% CIs):")
+    print(coefficient_table(fit_ols(df, "exam_score ~ study_hours_week + sleep_hours + attendance_pct + part_time_job")))
+    held_out = evaluate_regression(df, features, "exam_score")
+    cv_mean, cv_std = cross_val_r2(df, features, "exam_score")
+    print(
+        f"Held-out RMSE: model {held_out['model_rmse']:.1f} vs baseline {held_out['baseline_rmse']:.1f}; "
+        f"cross-validated R² = {cv_mean:.2f} ± {cv_std:.2f}"
     )
 
     ax = scatter_with_trend(df, "study_hours_week", "exam_score")
