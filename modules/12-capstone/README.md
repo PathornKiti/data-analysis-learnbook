@@ -50,7 +50,8 @@ See [`milestones.md`](milestones.md). In short: **week 1** finish data, cleaning
 
 ## Stretch options (pick at most one or two; quality beats quantity)
 
-* **Time series:** seasonality, rolling averages, time-series cross-validation.
+* **Time series:** seasonality, rolling averages, time-series cross-validation (see Module X4 for decomposition, autocorrelation, HAC standard errors and forecast evaluation).
+* **Repeated measures, survival or Bayesian analysis:** see extension modules X1, X2 and X3.
 * **Text data:** word counts, simple sentiment, topic exploration (with `scikit-learn`'s `CountVectorizer`/`TfidfVectorizer`).
 * **Data from an API or scraping** (check the site's terms and rate limits; cache responses).
 * **Model explanation:** permutation importance, partial-dependence plots, error analysis by group.

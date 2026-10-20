@@ -39,7 +39,20 @@ By the end, a student can:
 | 11 | [Communicating results](modules/11-communicating-results/) | docstrings, doctest, pytest, validation | reporting uncertainty in words | tests + README + report |
 | 12 | [Capstone](modules/12-capstone/) | everything | whatever the question needs | **final package + report + talk** |
 
-Optional extensions (see the capstone): time series · text analysis · web APIs & scraping · Streamlit dashboards.
+### Extension modules (optional)
+
+Each takes about two weeks (8–10 h). Assign the ones that match students' data; they build on Modules 8b and 9 and use the same notebook, exercise and checkpoint format.
+
+| # | Module | Tools | Maths | Project checkpoint |
+|---|---|---|---|---|
+| X1 | [Repeated measures & mixed models](modules/X1-repeated-measures-mixed-models/) | `statsmodels` `mixedlm`, cluster-robust SEs | variance components, ICC, design effect, REML vs ML, BLUPs and shrinkage | clustering check and a mixed-model re-analysis |
+| X2 | [Survival analysis](modules/X2-survival-analysis/) | `statsmodels` `SurvfuncRight`, `survdiff`, `PHReg` | survival and hazard functions, Kaplan–Meier and Greenwood, log-rank, Cox partial likelihood, RMST | time-to-event analysis with censoring |
+| X3 | [Bayesian inference](modules/X3-bayesian-inference/) | NumPy / SciPy (own grid and Metropolis code) | Bayes for parameters, conjugacy, credible intervals, Metropolis, R-hat and ESS, posterior predictive checks | Bayesian re-analysis of the main result with a prior sensitivity table |
+| X4 | [Time-series analysis & inference](modules/X4-time-series/) | `statsmodels` (`seasonal_decompose`, `acf`, `adfuller`, HAC, GLSAR) | moving averages, ACF, AR(1), effective sample size, Durbin–Watson, HAC, forecast variance, MASE | time-series check of the project's data |
+
+Datasets for the extensions: `longitudinal_scores.csv` (X1), `customer_churn.csv` (X2), `monthly_demand.csv` (X4); X3 reuses `app_trial.csv`, `students.csv` and `service_desk.csv`.
+
+Other optional capstone stretch options: text analysis · web APIs & scraping · Streamlit dashboards.
 
 ## Suggested pacing
 
@@ -65,11 +78,12 @@ Optional extensions (see the capstone): time series · text analysis · web APIs
 | 17–18 | 12 | capstone: polish, peer review, present |
 
 **Compressed (14 weeks).** Give 7b, 8b and 9b one week each by assigning only the exercises that match your students' projects (the lessons and reference sheets stay available), and merge Module 11 into the first capstone week.
+**Extensions.** After week 15 (or in place of the Module 10 week if the project is purely inferential), give each extension module one or two weeks, chosen by the project's data: clustered or repeated measurements → X1; time to an event → X2; small samples or prior information → X3; time-ordered data → X4.
 **Thesis track.** Keep the standard plan and add the written deliverables: a methods section built from the reference sheets, a pre-specified hypothesis table, and a figure list with captions.
 
 ## Assessment
 
-* **Module self-checks:** auto-checked exercises (formative); in Modules 7b, 8b and 9b students implement each calculation by hand and the checks compare with SciPy/statsmodels; Modules 6.5 and 11 add test-driven package exercises.
+* **Module self-checks:** auto-checked exercises (formative); in Modules 7b, 8b, 9b and X1–X4 students implement each calculation by hand and the checks compare with SciPy/statsmodels; Modules 6.5 and 11 add test-driven package exercises.
 * **Project milestones:** proposal → data card → cleaned data → EDA → analysis/model → tests & docs → final write-up.
 * **Final project:** graded with [`projects/rubric.md`](projects/rubric.md) and the **project doctor** (`python projects/check_project.py <project>`).
 

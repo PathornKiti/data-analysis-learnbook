@@ -55,6 +55,18 @@ Round sensibly (2–3 significant figures); give exact p-values to three decimal
 ## Model evaluation (prediction)
 > On the held-out final 60 days, the linear model's RMSE was 106 rides, compared with 630 for the predict-the-mean baseline; expanding-window cross-validation gave an RMSE of 117 ± 8.
 
+## Repeated measures and mixed models (Module X1)
+> Scores were recorded up to five times per student (381 observations from 80 students; the intraclass correlation was .77 over the first three waves), so a linear mixed model with a random intercept and slope per student was fitted by REML. Students in the programme improved by 1.86 points more per wave than the control group (group × wave interaction, 95% CI [1.08, 2.64], *p* < .001). Treating the rows as independent would have overstated the standard error of this interaction (0.69 instead of 0.40), because each student's own change is measured far more precisely than differences between students.
+
+## Survival analysis (Module X2)
+> Of 400 customers, 302 churned and 98 were still active at the end of follow-up (censored). Median time to churn was 7.8 months on the basic plan and 14.5 months on the premium plan (Kaplan–Meier); the curves differed (log-rank χ²(1) = 28.7, *p* < .001). Adjusting for monthly spend, basic customers churned at 1.90 times the rate of premium customers (Cox hazard ratio, 95% CI [1.50, 2.42]). Censoring was assumed to be unrelated to the risk of churn.
+
+## Bayesian analysis (Module X3)
+> We used independent Beta(1, 1) priors for each conversion rate. The posterior mean of the difference (gamified minus control) was 0.16 (95% credible interval [0.04, 0.27]); the posterior probability that the gamified version converts better was .995. Results under a more sceptical Beta(2, 8) prior are reported in Table 3. *(Replace with your own sensitivity analysis; for MCMC add chains, burn-in, R-hat and effective sample size.)*
+
+## Time series (Module X4)
+> Monthly demand (*n* = 144) was modelled by OLS on a linear trend, calendar-month dummies and a promotion indicator. Residuals were strongly autocorrelated (Durbin–Watson = 0.78), so the model was refitted with AR(1) errors (Cochrane–Orcutt, ρ̂ = 0.63): promotions were associated with +7.5 units (95% CI [5.65, 9.34]), compared with +9.1 (SE 1.44) when autocorrelation was ignored. On the last 24 months, held out chronologically, the model's MAE was 5.5, against 9.9 for the naive and 10.8 for the seasonal-naive forecasts.
+
 ## Figure and table captions
 > **Figure 3.** Post-test score by onboarding group (*n* = 100 per group). Points are group means; error bars are 95% confidence intervals (*t*-based). Source: randomised trial, 2024.
 > **Table 2.** Baseline-adjusted treatment effects (ANCOVA). Estimates are differences in points relative to control with 95% CIs; *p*-values are Holm-adjusted.

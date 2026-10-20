@@ -19,6 +19,7 @@ reproducible analysis, organised as a **Python package** rather than a single me
 | 10. Chart audit | Module 9b | every figure justified, its calculation and intervals stated, captions written |
 | 11. Polish | Module 11 | tests, docstrings, README, report notebook |
 | 12. Capstone | Module 12 | final package + report + short presentation |
+| (optional) Extensions | Modules X1–X4 | a mixed-model, survival, Bayesian or time-series section matching your data, with tested functions in `mixed.py`, `survival.py`, `bayes.py` or `timeseries.py` |
 
 ## Getting started
 

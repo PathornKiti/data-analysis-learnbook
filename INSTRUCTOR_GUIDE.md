@@ -30,13 +30,19 @@ How to teach with this repository. Everything here is a suggestion; adapt freely
 | 10 Prediction | 8–10 | 4 | leakage; metrics beyond accuracy |
 | 11 Communicating | 6–8 | 3 | writing good tests and honest sentences |
 | 12 Capstone | 12–18 | 4–6 + presentations | scope control |
+| X1 Repeated measures & mixed models | 8–10 | 4 | why rows are not independent; ICC and design effect; fixed vs random effects |
+| X2 Survival analysis | 8–10 | 4 | what censoring is and why dropping or averaging it is wrong; hazard vs risk; KM by hand |
+| X3 Bayesian inference | 8–10 | 4 | prior vs likelihood; reading a credible interval; MCMC diagnostics |
+| X4 Time series | 8–10 | 4 | autocorrelation and effective sample size; spurious regression; chronological validation |
 
 ## Formats
 
 **18-week semester (default).** One module per week roughly (8b gets two), as in the [pacing table](SYLLABUS.md#suggested-pacing).
 *Flipped:* students run `lesson.ipynb` before class; class time is for `exercises.ipynb`, discussion of tricky ideas, and a 10-minute project check-in.
 
-**8-week intensive.** Merge modules (0–1, 2–3, 4–5, 6–6.5, 7–8, 9–10, 11, 12), skip 7b/8b/9b (point students to the reference sheets instead) and keep the project small. Skip the optional parts of math notes; make the capstone a "finish and present" week.
+**8-week intensive.** Merge modules (0–1, 2–3, 4–5, 6–6.5, 7–8, 9–10, 11, 12), skip 7b/8b/9b and X1–X4 (point students to the reference sheets instead) and keep the project small. Skip the optional parts of math notes; make the capstone a "finish and present" week.
+
+**Extensions (X1–X4).** Optional and independent of each other (X2 and X3 are lighter on prerequisites than X1). Assign them by the shape of the students' data rather than to everyone; each one ends with a project checkpoint that fits into the capstone report.
 
 **Self-study.** Work the modules in order; do every project checkpoint (it is what turns the exercises into skill); join or form a study group for the Module 12 peer review.
 
@@ -64,6 +70,10 @@ How to teach with this repository. Everything here is a suggestion; adapt freely
 * **Module 7b:** bring two variables to class (one symmetric, one skewed) and have students predict the Q-Q plot shapes before drawing them. Then ask them to *break* a Shapiro–Wilk result by changing the sample size.
 * **Module 8b:** give students the three-group experiment and ask which test they'd use *before* showing the data; the "post-test only vs ANCOVA" contrast (p = 0.085 vs p < 0.001 on the same data) is the module's best lesson about design choices. Have them write a hypothesis table first.
 * **Module 9b:** show two charts of the same data with SD vs 95% CI error bars and ask what each says; then ask students to audit one figure from a published paper for what its error bars mean.
+* **Module X1:** simulate 40 students with five noisy scores each and test "the group effect" treating the 200 rows as independent; the false-positive rate (about a third) shocks students. Then show the cluster-robust and mixed-model answers.
+* **Module X2:** hand out 8 customers with start dates and an end-of-study date, and let students compute the average tenure of "those who churned" and then of everyone; they discover censoring themselves before you name it.
+* **Module X3:** have half the class pick a flat prior and half a strongly informative one, give both the same 10 data points, then add data in steps and watch the posteriors converge.
+* **Module X4:** show two independent random walks with a significant regression line and ask what went wrong; then repeat after differencing. Follow with the Durbin–Watson statistic of the first fit.
 * **Module 9:** do gradient descent on the board with two parameters and a bowl-shaped contour plot; the learning-rate demo makes the idea stick.
 * **Module 10:** have students try to *break* a model: leak a feature, shuffle time, add junk columns; see which of them survive cross-validation.
 * **Module 11:** run the test-writing exercise as a competition: who catches the most injected bugs with the fewest tests?

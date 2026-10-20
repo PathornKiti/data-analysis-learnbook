@@ -43,6 +43,15 @@ as a small Python package that anyone can run, test and understand.
 | 11 | [Communicating results](modules/11-communicating-results/) | write honest reports, charts, docs and tests; ethics |
 | 12 | [Capstone](modules/12-capstone/) | finish, review and present your project |
 
+**Extension modules** (optional, 1–2 weeks each; take the ones your project's data call for, after Modules 8b–9):
+
+| # | Module | Use it when your data are… |
+|---|---|---|
+| X1 | [Repeated measures & mixed models](modules/X1-repeated-measures-mixed-models/) | measured repeatedly on the same units, or grouped in clusters: ICC, design effect, cluster-robust SEs, random intercepts and slopes |
+| X2 | [Survival analysis](modules/X2-survival-analysis/) | time until an event with censoring: Kaplan–Meier, log-rank, hazard ratios, Cox regression |
+| X3 | [Bayesian inference](modules/X3-bayesian-inference/) | small samples, prior knowledge, or a need for probability statements: conjugate models, grids, Metropolis, credible intervals |
+| X4 | [Time-series analysis & inference](modules/X4-time-series/) | ordered in time: decomposition, autocorrelation, HAC and AR-error inference, spurious regression, honest forecasts |
+
 See [`SYLLABUS.md`](SYLLABUS.md) for outcomes, pacing and the maths in each module, the [`GLOSSARY.md`](GLOSSARY.md) for terms, and the [`reference/`](reference/) sheets
 (**which test? which chart? which distribution? how do I write it up?**) to keep open while writing a thesis.
 
@@ -84,6 +93,7 @@ projects/
   check_project.py   the "project doctor"
   rubric.md          how projects are assessed
 reference/           one-page sheets: choosing a test, choosing a chart, distributions, reporting results
+  (modules X1-X4 are optional extensions: mixed models, survival, Bayesian, time series)
 data/                small bundled (synthetic) datasets + generator script
 .github/workflows/   CI that runs every lesson, solution, package and project
 ```

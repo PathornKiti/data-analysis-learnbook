@@ -17,6 +17,10 @@ Then find your row. Always report an **estimate with an interval and an effect s
 | three+ independent groups | numeric | one-way ANOVA (Welch ANOVA if spreads differ) + Tukey/Holm | Kruskal–Wallis (+ Dunn post hoc) | $\eta^2$ / $\omega^2$ | independence; similar spreads; roughly normal residuals |
 | groups + a baseline measurement | numeric | **ANCOVA** (`post ~ pre + group`) or gain-score ANOVA | rank-based ANCOVA, bootstrap | adjusted difference + CI | linear baseline–outcome relation, same slope per group |
 | repeated measures, 3+ times | numeric | repeated-measures ANOVA / mixed model | Friedman | partial $\eta^2$ | sphericity (or use a mixed model) |
+| repeated or clustered measurements, uneven or missing waves | numeric | **linear mixed model** (random intercept, optionally slope) *(X1)* | cluster-robust SEs; per-unit summary measure (slope) then $t$ | group × time coefficient + CI; **ICC**, design effect | correct mean model; residuals and random effects roughly normal; enough clusters (≳20-30) |
+| time until an event, with censoring | time-to-event | **Kaplan–Meier + log-rank**; **Cox model** (`PHReg`) *(X2)* | stratified log-rank; restricted mean survival time (RMST) difference | median survival, hazard ratio + CI, RMST | censoring unrelated to the outcome; proportional hazards (for Cox) |
+| belief about a parameter, small $n$, prior information | any | **Bayesian posterior** (conjugate, grid, Metropolis) *(X3)* | – | posterior mean/median, credible interval, $P(\text{effect}>\delta)$ | stated prior (with sensitivity analysis); model checked; MCMC diagnostics (R-hat, ESS) |
+| outcome recorded in time order | numeric | OLS with **HAC standard errors** or **AR errors** *(X4)* | difference the series; chronological validation | coefficient + HAC CI; MAE / MASE of forecasts | no leftover autocorrelation (Durbin–Watson, ACF); stationary residuals |
 | one proportion vs a value | binary | exact binomial test | – | $\hat p$ with Wilson CI | independent trials |
 | two independent proportions | binary | two-proportion $z$ / $\chi^2$ | **Fisher exact** (small counts) | difference, risk ratio, **odds ratio** + CI | expected counts $\ge5$ for $z$/$\chi^2$ |
 | two paired proportions | binary | McNemar test | exact McNemar | odds ratio of discordant pairs | paired binary outcomes |
@@ -61,6 +65,9 @@ stats.pearsonr(x, y); stats.spearmanr(x, y); stats.kendalltau(x, y)
 
 stats.shapiro(x); stats.levene(*groups); stats.kstest(x, dist.cdf)   # assumption checks (use with plots!)
 multipletests(pvals, method="holm")                    # also "bonferroni", "fdr_bh"
+smf.mixedlm("score ~ wave * group", df, groups=df["id"], re_formula="~wave").fit()   # mixed model (X1)
+PHReg.from_formula("time ~ basic + spend", df, status=df["event"].to_numpy()).fit()    # Cox model (X2)
+sm.OLS(y, X).fit(cov_type="HAC", cov_kwds={"maxlags": 6})                              # HAC standard errors (X4)
 ttost_ind(a, b, -margin, margin)                       # equivalence
 TTestIndPower().solve_power(effect_size=0.5, power=0.8, alpha=0.05)  # sample size per group
 stats.permutation_test((a, b), statistic, ...)         # permutation test for any statistic
@@ -68,7 +75,7 @@ stats.bootstrap((x,), np.mean)                         # bootstrap CI for any st
 ```
 
 ## Step 4: checks before you trust the result
-- [ ] **Independence**: are observations really independent (no repeated measures, clusters, time series)? If not, use paired/mixed/time-series methods.
+- [ ] **Independence**: are observations really independent (no repeated measures, clusters, time series)? If not, use paired tests, mixed models or cluster-robust errors (Module X1) or time-series methods (Module X4).
 - [ ] **Plot the data**: histogram/ECDF/Q-Q per group; look for outliers, skew, ties, floor/ceiling effects.
 - [ ] **Sample size** per group and **power**: can this study detect the effect you care about? (Report the minimum detectable effect.)
 - [ ] **Sensitivity analysis**: does a second reasonable method (Welch ↔ Mann–Whitney ↔ permutation ↔ log transform) give the same conclusion?
